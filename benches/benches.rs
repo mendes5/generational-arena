@@ -19,7 +19,7 @@ fn insert<T: Default>(n: usize) {
     }
 }
 
-fn lookup<T>(arena: &Arena<T>, idx: Index, n: usize) {
+fn lookup<T>(arena: &Arena<T>, idx: Index<T>, n: usize) {
     for _ in 0..n {
         criterion::black_box(&arena[idx]);
     }
